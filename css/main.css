@@ -238,6 +238,9 @@ nav .grid{
     text-align: center;
     text-decoration: none;
 }
+.btnBanner a:hover{
+    color: green;
+}
 @media only screen and (min-width: 768px) and (max-width: 1024px){
     #banner{
     background: url(../img/main_banner.jpg) right center no-repeat;
@@ -700,6 +703,153 @@ nav .grid{
     }
 }
 /*TEAM*/
+#team{
+    min-height: 918px;
+    height: auto;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    padding-top: 150px;
+    padding-bottom: 135px;
+    padding-left: 9.6875%;
+    padding-right: 11.5625%;
+}
+#team h2{
+    color: #494949;
+    font-family: Montserrat;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#team p{
+    max-width: 1095px;
+    color: #6a6a6a;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 84px;
+}
+.teamUnit .teamIcon{
+    max-width: 279px;
+    max-height: 279px;
+    background-color: #f4f3f1;
+    border-radius: 50%;
+    margin-bottom: 35px;
+}
+.teamUnit .teamIcon img{
+    width: 100%;
+}
+#team .teamUnit h3{
+    color: #6f6f6e;
+    font-family: Montserrat;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 15px;
+}
+#team .teamUnit p{
+    color: #6f6f6e;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -1.09px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+#team .teamUnit .social{
+    color: #0087be;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 1.8px;    
+}
+#team .grid{
+    display: grid;
+    grid-row-gap: 80px;
+    grid-column-gap: 30px;
+    width: 100%;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px){
+    #team{
+        height: auto;
+        background-size: cover;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #team .grid{
+    grid-template: repeat(6, auto) / 1fr;
+    }
+    .teamUnit{
+    margin: 0 auto;    
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    #team{
+        height: auto;
+        background-size: cover;
+    }
+    #team .grid{
+    grid-template: repeat(2, auto) / 1fr 1fr;
+    }
+}
+@media only screen and (min-width: 1025px){
+    #team .grid{
+    grid-template: repeat(1, auto) / repeat(4, minmax(100px, 1fr));
+    }
+}
 /*OFFER*/
+#offer{
+    box-sizing: border-box;
+    min-height: 177px;
+    padding: 80px 15% 65px 15%;
+    background-color: #e2e2e2;
+}
+#offer .text{
+    color: #494949;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: 700;
+    width: calc(100% - 200px);
+    line-height: 32px;
+    float: left;
+}
+#offer .btnOffer{
+    box-sizing: border-box;
+    float: right;
+    width: 192px;
+    height: 54px;
+    margin-top: -11px;
+}
+#offer .btnOffer a{
+    color: #ffffff;
+    font-family: Lato;
+    font-size: 21px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.32px;
+    line-height: 54px;
+    box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2);
+    border-radius: 27px;
+    background-color: #0087be;
+    display: inline-block;
+    width: 192px;
+    height: 54px;
+    text-align: center;
+    text-decoration: none;
+}
+@media only screen and (min-width: 0px) and (max-width: 1024px){
+    #offer .text{
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    }
+    #offer .btnOffer{
+    float: none;
+    margin: 0 auto;
+    margin-top: 20px;
+    }
+}
 /*FOOTER*/
 /*COPY*/
