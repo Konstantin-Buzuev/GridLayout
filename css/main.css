@@ -624,6 +624,81 @@ nav .grid{
 }
 /*OUR_WORK*/
 /*GALLERY*/
+#gallery{
+    min-height: 826px;
+    height: auto;
+    box-sizing: border-box;
+    background: url(../img/gallery_back.png), #2fb39b;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: auto contain;
+    background-blend-mode: color-burn;
+    padding-top: 94px;
+    padding-left: 16.5625%;
+    padding-right: 15.625%;
+    padding-bottom: 54px;
+}
+#gallery h2{
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    
+    margin-bottom: 38px;
+}
+#gallery p{
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 54px;
+}
+.galleryUnit{
+    height: 210px;
+}
+.galleryUnit img{
+    width: 100%;
+    max-width: 344px;
+    object-position: center;
+    object-fit: contain; 
+}
+#gallery .grid{
+    display: grid;
+    grid-row-gap: 35px;
+    grid-column-gap: 38px;
+    width: 100%;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px){
+    #gallery{
+        height: auto;
+        background-size: cover;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #gallery .grid{
+    grid-template: repeat(6, auto) / 1fr;
+    }
+    .galleryUnit{
+    margin: 0 auto;    
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    #gallery{
+        height: auto;
+        background-size: cover;
+    }
+    #gallery .grid{
+    grid-template: repeat(3, auto) / 1fr 1fr;
+    }
+}
+@media only screen and (min-width: 1025px){
+    #gallery .grid{
+    grid-template: repeat(2, auto) / repeat(3, 1fr);
+    }
+}
 /*TEAM*/
 /*OFFER*/
 /*FOOTER*/
