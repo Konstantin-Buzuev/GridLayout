@@ -626,6 +626,207 @@ nav .grid{
     line-height: 30px;
 }
 /*OUR_WORK*/
+#ourWork{
+    background-color: #ffffff;
+    padding-top: 100px;
+    padding-left: 13%;
+    padding-right: 12%;
+    padding-bottom: 100px;
+}
+#ourWork h2{
+    color: #494949;
+    font-family: Montserrat;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 38px;
+}
+#ourWork p{
+    color: #6a6a6a;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;    
+}
+.work p, .creative p{
+    margin-bottom: 54px;
+}
+#ourWork article img{
+    max-width: 335px;
+    object-fit: contain;
+    margin-bottom: 35px;
+}
+#ourWork article h3{
+    color: #6f6f6e;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -1.21px;
+    text-align: left;
+    margin-bottom: 13px;
+}
+#ourWork article blockquote{
+    color: #0087be;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: -0.38px;    
+    text-align: left;
+    margin-bottom: 27px;
+}
+.btnWorks{
+    width: 154px;
+    height: 43px;
+    box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2);
+    background-color: #0087be;
+    border-radius: 21px;
+    text-align: center;
+    margin: 0 auto;
+}
+.btnWorks a{
+    color: #ffffff;
+    font-family: Lato;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.32px;
+    line-height: 42px;
+    text-decoration: none;
+}
+.btnWorks a:hover{
+    color: green;
+}
+.work .grid{
+    display: grid;
+}
+#article-1{
+    grid-area: article-top;
+}
+#article-2{
+    grid-area: article-bottom;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px){
+    #ourWork{
+        padding: 20px 0px;
+        text-align: center;
+    }
+    #ourWork h2, #ourWork article h3, #ourWork article blockquote{
+        text-align: center;
+    }
+    .work .grid{
+    grid-row-gap: 0px;    
+    grid-template-columns: minmax(0px, 10px) 1fr minmax(0px, 10px);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+        ". article-top ."
+        ". article-bottom ."
+    }
+    #ourWork article img, article{
+        margin: 0 auto;
+    }
+    #ourWork .work article p{
+        text-align: center;
+    }
+    .work{
+        margin-bottom: 40px;
+    }
+    .creative details{
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+     #ourWork{
+     padding: 40px 10px;
+     }
+    #ourWork h2, #ourWork p:nth-child(2){
+        text-align: center;
+    }
+    .work .grid{
+    grid-column-gap: minmax(10px, 40px);    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "article-top article-bottom"
+    }
+    .work{
+    margin-bottom: 40px;
+    }
+    .creative details{
+    margin: 0 auto;
+    }
+}
+@media only screen and (min-width: 1025px){
+    .work{
+    max-width: 715px;
+    }
+    .work .grid{
+    grid-column-gap: minmax(10px, 40px);    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "article-top article-bottom"
+    }
+}
+@media only screen and (min-width: 1025px){
+#ourWork .grid{
+    grid-template-columns: 1fr 1fr;            
+    grid-template-rows: auto;
+    grid-column-gap: 60px;
+    }
+}
+.creative details{
+    max-width: 422px;
+}
+.creative summary{
+    display: block;
+    margin-bottom: 12px;
+    max-width: 422px;
+    height: 54px;
+    border-radius: 27px;
+    background-color: #e2e2e2;
+    color: #494949;
+    line-height: 54px;
+}
+.creative details[open] > summary{
+    background-color: #0087be;
+    color: #ffffff;
+}
+.creative details[open]{
+    margin-bottom: 40px;
+}
+.creative summary div{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 7px;
+    background-color: #ffffff;
+    float: left;
+}
+.creative summary div i{
+    width: 40px;
+    height: 40px;
+    color: #0087be;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+    vertical-align: middle;
+    padding-left: 2px;
+    
+    
+}
+.creative summary::-webkit-details-marker {
+  display: none;
+}
+.creative summary:focus{
+    outline: none;
+}
+#ourWork .grid{
+    display: grid;
+}
+
+
 /*GALLERY*/
 #gallery{
     min-height: 826px;
@@ -1041,5 +1242,22 @@ footer form input[type=submit]{
         "address . left-menu . right-menu . enquiryForm"
     }
 }
-
 /*COPY*/
+#copy{
+    color: #615555;
+    font-family: "Open Sans";
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.33px;
+    text-align: center;
+    background-color: #1a1a1a;
+}
+#copy a{
+    color: #615555;
+    text-decoration: none;
+}
+#copy a:hover{
+    text-decoration: underline;
+    color: blue;
+}
