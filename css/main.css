@@ -794,25 +794,23 @@ nav .grid{
 .creative details[open]{
     margin-bottom: 40px;
 }
-.creative summary div{
-    height: 40px;
-    width: 40px;
+.creative summary i{
     border-radius: 50%;
     margin: 7px;
     background-color: #ffffff;
     float: left;
-}
-.creative summary div i{
+    display: block;    
+    box-sizing: border-box;
     width: 40px;
     height: 40px;
     color: #0087be;
     font-size: 22px;
-    line-height: 22px;
+    line-height: 40px;
     font-weight: 400;
     letter-spacing: 2px;
     text-align: center;
     vertical-align: middle;
-    padding-left: 2px;
+    padding-left: 4px;
     
     
 }
@@ -825,8 +823,6 @@ nav .grid{
 #ourWork .grid{
     display: grid;
 }
-
-
 /*GALLERY*/
 #gallery{
     min-height: 826px;
@@ -1063,7 +1059,7 @@ nav .grid{
     padding-right: 11%;
     padding-bottom: 110px;
 }
-#footer h3{
+#footer h3, #footer-1 p{
     color: #ffffff;
     font-family: "Open Sans";
     font-size: 22px;
