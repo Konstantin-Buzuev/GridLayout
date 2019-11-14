@@ -521,13 +521,22 @@ nav .grid{
     }
     #choose .grid{
     grid-row-gap: 0px;    
-    grid-template-columns: 337 px 1fr;
-    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
     grid-template-areas: 
-        ". unit-1"
-        ". unit-2"
-        "doctor unit-3"
-        "doctor unit-4"
+        "doctor"
+        "unit-1"
+        "unit-2"
+        "unit-3"
+        "unit-4"
+    }
+    .ChooseUnit{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+    .ChooseUnit:first-child{
+        margin-top: 0px;
     }
     .female{
     margin: auto auto 0 auto; 
@@ -562,6 +571,9 @@ nav .grid{
     }
 }
 /*ACHIEVEMENTS*/
+.achievements-back{
+    background-color: #0082bb;
+}
 #achievements{
     height: 592px;
     background: url(../img/achievements.png), #0082bb;
@@ -571,8 +583,9 @@ nav .grid{
     background-blend-mode: multiply;
 }
 #achievements .grid{
-    padding-top: 153px;
+    padding-top: 150px;
     display: grid;
+    padding-bottom: 150px;
 }
 #achivementUnit-1{
     grid-area: aunit-1;
@@ -693,8 +706,8 @@ nav .grid{
 #ourWork{
     background-color: #ffffff;
     padding-top: 100px;
-    padding-left: 13%;
-    padding-right: 12%;
+    padding-left: 0px;
+    padding-right: 0px;
     padding-bottom: 100px;
 }
 #ourWork h2{
@@ -710,7 +723,7 @@ nav .grid{
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    line-height: 30px;    
+    line-height: 30px;
 }
 .work p, .creative p{
     margin-bottom: 54px;
@@ -799,9 +812,10 @@ nav .grid{
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
-     #ourWork{
-     padding: 40px 10px;
-     }
+    #ourWork{
+    padding: 40px 10px;
+    width: calc(100% - 20px);
+    }
     #ourWork h2, #ourWork p:nth-child(2){
         text-align: center;
     }
@@ -830,13 +844,15 @@ nav .grid{
     grid-template-areas: 
         "article-top article-bottom"
     }
-}
-@media only screen and (min-width: 1025px){
-#ourWork .grid{
+    #ourWork .grid{
     grid-template-columns: 1fr 1fr;            
     grid-template-rows: auto;
     grid-column-gap: 60px;
     }
+    #ourWork .creative p{
+    max-width: 410px;
+    }
+
 }
 .creative details{
     max-width: 422px;
@@ -888,6 +904,9 @@ nav .grid{
     display: grid;
 }
 /*GALLERY*/
+.gallery-back{
+    background-color: #2fb39b;
+}
 #gallery{
     min-height: 826px;
     height: auto;
@@ -997,7 +1016,7 @@ nav .grid{
     max-height: 279px;
     background-color: #f4f3f1;
     border-radius: 50%;
-    margin-bottom: 35px;
+    margin: 0 auto 35px auto;
 }
 .teamUnit .teamIcon img{
     width: 100%;
@@ -1035,14 +1054,20 @@ nav .grid{
     #team{
         height: auto;
         background-size: cover;
-        padding-left: 0px;
-        padding-right: 0px;
+        padding: 20px 0px;
+    }
+    #team h2, #team p{
+    margin-bottom: 10px;
     }
     #team .grid{
     grid-template: repeat(6, auto) / 1fr;
+    grid-row-gap: 10px;
     }
     .teamUnit{
-    margin: 0 auto;    
+    margin: 0 auto;
+    }
+    #team .teamUnit p{
+    margin-bottom: 10px;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
@@ -1060,6 +1085,9 @@ nav .grid{
     }
 }
 /*OFFER*/
+.offer-back{
+    background-color: #e2e2e2;
+}
 #offer{
     box-sizing: border-box;
     min-height: 177px;
@@ -1116,7 +1144,11 @@ nav .grid{
     }
 }
 /*FOOTER*/
+.footer-back{
+    background-color: #171717;
+}
 #footer{
+    box-sizing: border-box;
     background-color: #171717;
     padding-top: 110px;
     padding-left: 13%;
@@ -1254,9 +1286,12 @@ footer form input[type=submit]{
 }
 #footer-2{
     grid-area: left-menu;
+    width: 167px;
+    text-align: left;
 }
 #footer-3{
     grid-area: right-menu;
+    width: 167px;
 }
 #footer-4{
     grid-area: enquiryForm;
