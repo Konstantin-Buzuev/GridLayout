@@ -215,7 +215,7 @@ nav .grid{
     }
     nav .grid{
     grid-row-gap: 10px;
-    grid-template-columns: 450px, minmax(0px, 400px) 195px;
+    grid-template-columns: 450px minmax(0px, 400px) 195px;
     grid-template-rows: repeat(1, 45px);
     grid-template-areas: 
         "nmenu . social"
@@ -610,7 +610,7 @@ nav .grid{
     }
     #choose .grid{
     grid-row-gap: 0px;    
-    grid-template-columns: 337 px 1fr;
+    grid-template-columns: 337px 1fr;
     grid-template-rows: repeat(4, auto);
     grid-template-areas: 
         ". unit-1"
@@ -629,7 +629,7 @@ nav .grid{
 @media only screen and (min-width: 1025px){
     #choose .grid{
     grid-row-gap: 0px;    
-    grid-template-columns: 1fr 337 px 1fr;
+    grid-template-columns: 1fr 337px 1fr;
     grid-template-rows: repeat(2, auto);
     grid-template-areas: 
         "unit-1 doctor unit-2"
@@ -966,7 +966,7 @@ nav .grid{
     margin-bottom: 25px;
     }
     .work .grid{
-    grid-column-gap: minmax(10px, 40px);    
+    grid-column-gap: 25px;    
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
@@ -995,7 +995,7 @@ nav .grid{
     max-width: 715px;
     }
     .work .grid{
-    grid-column-gap: minmax(10px, 40px);    
+    grid-column-gap: 40px;    
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
@@ -1022,7 +1022,7 @@ nav .grid{
     background: url(../img/gallery_back.png), #2fb39b;
     background-position: right;
     background-repeat: no-repeat;
-    background-size: auto contain;
+    background-size: contain;
     background-blend-mode: color-burn;
     padding-top: 94px;
     padding-bottom: 54px;
