@@ -58,35 +58,6 @@ header .grid:first-child{
 header .grid:last-child{
     margin-right: -7px;
 }
-@media only screen and (min-width: 0px) and (max-width: 767px){
-    header .grid{
-    grid-row-gap: 10px;    
-    grid-template-columns: 1fr 330px 1fr;
-    grid-template-rows: repeat(4, 45px);
-    grid-template-areas: 
-        ". logo ."
-        ". clock ."
-        ". mail ."
-        ". mobile."
-    }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px){
-    header .grid{
-    grid-row-gap: 10px;
-    grid-template-columns: minmax(290px, 1fr) minmax(270px, 1fr) 1fr;
-    grid-template-rows: repeat(2, 45px);
-    grid-template-areas: 
-        ". logo ."
-        "clock mail mobile"
-    }
-}
-@media only screen and (min-width: 1025px){
-    header .grid{
-    grid-template-columns: 210px minmax(20px, 210px) 288px minmax(20px, 56px) 228px minmax(20px, 39px) 181px;
-    grid-template-rows: 45px;
-    grid-template-areas: "logo . clock . mail . mobile"
-    }
-}
 header .icon{
     width: 27px;
     height: 27px;
@@ -110,6 +81,54 @@ line-height: 22px;
 }
 .HeaderUnit  p:last-child{
 font-weight: 400;
+}
+@media only screen and (min-width: 0px) and (max-width: 767px){
+    .header-container{
+        padding: 10px;
+    }
+    header .grid{
+    grid-row-gap: 15px;    
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 45px);
+    grid-template-areas: 
+        "logo"
+        "clock"
+        "mail"
+        "mobile"
+    }
+    header{
+    margin-bottom: 0px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    .header-container{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    header {
+    margin-bottom: 25px;
+    }
+    header .grid{
+    grid-row-gap: 10px;
+    grid-template-columns: minmax(290px, 1fr) minmax(270px, 1fr) 1fr;
+    grid-template-rows: repeat(2, 45px);
+    grid-template-areas: 
+        ". logo ."
+        "clock mail mobile"
+    }
+}
+@media only screen and (min-width: 1025px){
+    header .grid{
+    grid-template-columns: 210px minmax(20px, 210px) 288px minmax(20px, 56px) 228px minmax(20px, 39px) 181px;
+    grid-template-rows: 45px;
+    grid-template-areas: "logo . clock . mail . mobile"
+    }
+    .header-container{
+    padding-left: 25px;
+    padding-right: 25px;
+    width: calc(100% - 50px);
+    
+    }
 }
 /*NAV*/
 nav{
@@ -148,18 +167,36 @@ nav .grid{
         margin: 0 auto;
     }
     #nav-menu .nav-link{
-        font-size: 10px;
+    font-size: 16px;
+    padding: 0px;    
+    }
+    .nav-link{
+    padding: 0px;    
     }
     #nav-social i{
-        font-size: 18px;
+        font-size: 24px;
+    }
+    nav{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    }
+    #nav-menu .nav{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    }
+    #nav-social .nav{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 20px;
     }
     nav .grid{
-    grid-row-gap: 0px;    
-    grid-template-columns: minmax(0px, 140px) 400px minmax(0px, 140px);
-    grid-template-rows: repeat(2, 40px);
+    grid-row-gap: 15px;    
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
     grid-template-areas: 
-        ". nmenu ."
-        ". social ."
+        "nmenu"
+        "social"
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
@@ -182,6 +219,9 @@ nav .grid{
     grid-template-rows: repeat(1, 45px);
     grid-template-areas: 
         "nmenu . social"
+    }
+    nav{
+    margin-bottom: 25px;
     }
 }
 @media only screen and (min-width: 1025px){
@@ -313,7 +353,6 @@ nav .grid{
     }
     #banner{
     background: #e5e9f1;
-    padding-bottom: 10px;
     }
     .banner{
         display: block;
@@ -321,8 +360,10 @@ nav .grid{
     }
     #banner .wrap{
     max-width: 524px;
-    width: 100%;
+    width: calc(100% - 20px);
     margin: 0 auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
     }
     #banner h1{
     font-size: 24px;
@@ -383,35 +424,6 @@ nav .grid{
 #treatmentUnit-doctors .icon{
     padding: 17px 13px 16px 19px;    
 }
-@media only screen and (min-width: 0px) and (max-width: 767px){
-    #treatment .grid{
-    grid-row-gap: 0px;    
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: 
-        "treatment"
-        "emergency"
-        "staff"
-        "doctors"
-    }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px){
-    #treatment .grid{
-    grid-row-gap: 0px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: 
-        "treatment emergency"
-        "staff doctors"
-    }
-}
-@media only screen and (min-width: 1025px){
-    #treatment .grid{
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas: "treatment emergency staff doctors"
-    }
-}
 .treatmentUnit{
     padding: 77px 0px 57px 0px;
     text-align: center;
@@ -441,7 +453,52 @@ nav .grid{
     border-radius: 50%;
     background-color: #ffffff;
 }
+@media only screen and (min-width: 0px) and (max-width: 767px){
+    #treatment .grid{
+    grid-row-gap: 0px;    
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+        "treatment"
+        "emergency"
+        "staff"
+        "doctors"
+    }
+    #treatment{
+    margin-bottom: 10px;
+    }
+    .treatmentUnit{
+    padding: 10px 0px;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    #treatment .grid{
+    grid-row-gap: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+        "treatment emergency"
+        "staff doctors"
+    }
+    #treatment{
+        margin-bottom: 25px;
+    }
+    .treatmentUnit{
+    padding: 25px 0px;
+    }
+}
+@media only screen and (min-width: 1025px){
+    #treatment .grid{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "treatment emergency staff doctors"
+    }
+}
 /*CHOOSE*/
+#choose{
+    padding: 0px 25px;
+    box-sizing: border-box;
+}
 #choose h2{
     text-align: center;
     color: #494949;
@@ -516,8 +573,16 @@ nav .grid{
     margin: 0;
 }
 @media only screen and (min-width: 0px) and (max-width: 767px){
-        .ChooseUnit:first-child{
-        margin-top: 91px;
+    .female img{
+    width: 100%;
+    background-size: contain;
+    }
+    #choose{
+    padding: 0px 10px;
+    box-sizing: border-box;
+    }
+    .ChooseUnit:first-child{
+        margin-top: 10px;
     }
     #choose .grid{
     grid-row-gap: 0px;    
@@ -535,16 +600,13 @@ nav .grid{
         margin-right: auto;
         margin-bottom: 10px;
     }
-    .ChooseUnit:first-child{
-        margin-top: 0px;
-    }
     .female{
     margin: auto auto 0 auto; 
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
     .ChooseUnit:first-child{
-        margin-top: 91px;
+        margin-top: 00px;
     }
     #choose .grid{
     grid-row-gap: 0px;    
@@ -555,6 +617,13 @@ nav .grid{
         "doctor unit-2"
         "doctor unit-3"
         "doctor unit-4"
+    }
+    #choose{
+    padding: 0px 25px;
+    box-sizing: border-box;
+    }
+    #choose h2, #choose .ChooseUnit h3, #choose .ChooseUnit p{
+        margin-bottom: 25px;
     }
 }
 @media only screen and (min-width: 1025px){
@@ -579,7 +648,7 @@ nav .grid{
     background: url(../img/achievements.png), #0082bb;
     background-position: right;
     background-repeat: no-repeat;
-    background-size: auto contain;
+    background-size: cover;
     background-blend-mode: multiply;
 }
 #achievements .grid{
@@ -587,20 +656,20 @@ nav .grid{
     display: grid;
     padding-bottom: 150px;
 }
-#achivementUnit-1{
+#achievementUnit-1{
     grid-area: aunit-1;
 }
-#achivementUnit-1 .icon{
+#achievementUnit-1 .icon{
     background: url(../img//customers.png);
     width: 91px;
     height: 80px;
     margin: 0 37px;
     margin-bottom: 47px;
 }
-#achivementUnit-2{
+#achievementUnit-2{
     grid-area: aunit-2;
 }
-#achivementUnit-2 .icon{
+#achievementUnit-2 .icon{
     background: url(../img/hospitality.png);
     width: 80px;
     height: 71px;
@@ -608,10 +677,10 @@ nav .grid{
     margin-bottom: 46px;
     margin-top: 9px;
 }
-#achivementUnit-3{
+#achievementUnit-3{
     grid-area: aunit-3;
 }
-#achivementUnit-3 .icon{
+#achievementUnit-3 .icon{
     background: url(../img/approach.png);
     width: 91px;
     height: 62px;
@@ -619,38 +688,79 @@ nav .grid{
     margin-bottom: 56px;
     margin-top: 9px;
 }
-#achivementUnit-4{
+#achievementUnit-4{
     grid-area: aunit-4;
 }
-#achivementUnit-4 .icon{
+#achievementUnit-4 .icon{
     background: url(../img/lung.png);
     width: 91px;
     height: 73px;
     margin: 9px 27px 44px 15px;
+}
+.achievementUnit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.achievementUnit h3{
+    height: 75px;
+    color: #ffffff;
+    font-family: Montserrat, sans-serif;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: -1.19px;
+    text-align: left;
+    overflow: visible;
+    
+}
+.achievementUnit .border{
+    height: 6px;
+    width: 85px;
+    background-color: #ffffff;
+    margin-bottom: 25px;
+}
+.achievementUnit p{
+    color: #ffffff;
+    font-family: Montserrat, sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: -1.52px;
+    line-height: 30px;
 }
 @media only screen and (min-width: 0px) and (max-width: 767px){
     #achievements{
         height: auto;
         background-size: cover;
     }
-    #achievements .grid{
-    grid-row-gap: 0px;    
-    grid-template-columns: minmax(10px, 250px) 1fr minmax(10px, 250px) 1fr minmax(10px, 250px);
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: 
-        ". aunit-1 . aunit-2 ."
-        ". aunit-3 . aunit-4 ."
+    #achievements .achievementUnit .icon{
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
     }
-    .achivementUnit:nth-child(-n+2){
-    margin-bottom: 153px;
+    .achievementUnit p{
+    margin-bottom: 10px;
+    }
+    #achievements .grid{
+    padding: 10px 0px;
+    grid-row-gap: 0px;    
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+        "aunit-1"
+        "aunit-2"
+        "aunit-3"
+        "aunit-4"
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
     #achievements{
         height: auto;
         background-size: cover;
+        padding: 25px 0px;
     }
     #achievements .grid{
+    padding: 0px;
     grid-row-gap: 0px;    
     grid-template-columns: minmax(10px, 250px) 1fr minmax(10px, 250px) 1fr minmax(10px, 250px);
     grid-template-rows: repeat(2, auto);
@@ -659,7 +769,7 @@ nav .grid{
         ". aunit-3 . aunit-4 ."
     }
     .achivementUnit:nth-child(-n+2){
-    margin-bottom: 153px;
+    margin-bottom: 25px;
     }
 }
 @media only screen and (min-width: 1025px){
@@ -671,44 +781,15 @@ nav .grid{
         ". aunit-1 . aunit-2 . aunit-3 . aunit-4 ."
     }
 }
-.achivementUnit{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-.achivementUnit h3{
-    height: 75px;
-    color: #ffffff;
-    font-family: Montserrat, sans-serif;
-    font-size: 50px;
-    font-weight: 500;
-    letter-spacing: -1.19px;
-    text-align: left;
-    overflow: visible;
-    
-}
-.achivementUnit .border{
-    height: 6px;
-    width: 85px;
-    background-color: #ffffff;
-    margin-bottom: 25px;
-}
-.achivementUnit p{
-    color: #ffffff;
-    font-family: Montserrat, sans-serif;
-    font-size: 25px;
-    font-weight: 500;
-    letter-spacing: -1.52px;
-    line-height: 30px;
-}
 /*OUR_WORK*/
 #ourWork{
     background-color: #ffffff;
     padding-top: 100px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-bottom: 100px;
+    box-sizing: border-box;
+    max-width: 1200px;
 }
 #ourWork h2{
     color: #494949;
@@ -782,78 +863,6 @@ nav .grid{
 #article-2{
     grid-area: article-bottom;
 }
-@media only screen and (min-width: 0px) and (max-width: 767px){
-    #ourWork{
-        padding: 20px 0px;
-        text-align: center;
-    }
-    #ourWork h2, #ourWork article h3, #ourWork article blockquote{
-        text-align: center;
-    }
-    .work .grid{
-    grid-row-gap: 0px;    
-    grid-template-columns: minmax(0px, 10px) 1fr minmax(0px, 10px);
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: 
-        ". article-top ."
-        ". article-bottom ."
-    }
-    #ourWork article img, article{
-        margin: 0 auto;
-    }
-    #ourWork .work article p{
-        text-align: center;
-    }
-    .work{
-        margin-bottom: 40px;
-    }
-    .creative details{
-        margin: 0 auto;
-    }
-}
-@media only screen and (min-width: 768px) and (max-width: 1024px){
-    #ourWork{
-    padding: 40px 10px;
-    width: calc(100% - 20px);
-    }
-    #ourWork h2, #ourWork p:nth-child(2){
-        text-align: center;
-    }
-    .work .grid{
-    grid-column-gap: minmax(10px, 40px);    
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "article-top article-bottom"
-    }
-    .work{
-    margin-bottom: 40px;
-    }
-    .creative details{
-    margin: 0 auto;
-    }
-}
-@media only screen and (min-width: 1025px){
-    .work{
-    max-width: 715px;
-    }
-    .work .grid{
-    grid-column-gap: minmax(10px, 40px);    
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: 
-        "article-top article-bottom"
-    }
-    #ourWork .grid{
-    grid-template-columns: 1fr 1fr;            
-    grid-template-rows: auto;
-    grid-column-gap: 60px;
-    }
-    #ourWork .creative p{
-    max-width: 410px;
-    }
-
-}
 .creative details{
     max-width: 422px;
 }
@@ -903,6 +912,105 @@ nav .grid{
 #ourWork .grid{
     display: grid;
 }
+@media only screen and (min-width: 0px) and (max-width: 767px){
+    #ourWork{
+        padding: 10px 10px 0px 10px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    #ourWork h2, #ourWork p, #ourWork article h3, #ourWork article blockquote{
+        text-align: center;
+        margin-bottom: 10px;
+        
+    }
+    .work .grid{
+    grid-row-gap: 0px;    
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+        "article-top"
+        "article-bottom"
+    }
+    #ourWork article img, article{
+        margin: 0 auto;
+    }
+    #ourWork article img{
+    max-width: 100%;
+    }
+    #ourWork .work article p{
+        text-align: center;
+    }
+    .work{
+        margin-bottom: 10px;
+    }
+    .creative details{
+        margin: 0 auto 10px auto;
+    }
+    .creative details[open]{
+    margin-bottom: 10px;
+    }
+    .creative details:last-child{
+    margin-bottom: 0px;
+    }
+
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+    #ourWork{
+    padding: 25px 25px;
+    width: calc(100% - 50px);
+    }
+    #ourWork h2, #ourWork p:nth-child(2){
+        text-align: center;
+    }
+    #ourWork h2, #ourWork p{
+    margin-bottom: 25px;
+    }
+    .work .grid{
+    grid-column-gap: minmax(10px, 40px);    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "article-top article-bottom"
+    }
+    .work{
+    margin-bottom: 25px;
+    }
+    .creative details, .creative details[open]{
+    margin: 0 auto 25px auto;
+    max-width: 100%;
+    width: 100%;
+    text-align: justify;
+    }
+    .creative details:last-child{
+    margin-bottom: 0px;
+    }
+    .creative summary{
+    max-width: 100%;
+    width: 100%;
+    text-align: justify;
+    }
+}
+@media only screen and (min-width: 1025px){
+    .work{
+    max-width: 715px;
+    }
+    .work .grid{
+    grid-column-gap: minmax(10px, 40px);    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "article-top article-bottom"
+    }
+    #ourWork .grid{
+    grid-template-columns: 1fr 1fr;            
+    grid-template-rows: auto;
+    grid-column-gap: 60px;
+    }
+    #ourWork .creative p{
+    max-width: 410px;
+    }
+
+}
 /*GALLERY*/
 .gallery-back{
     background-color: #2fb39b;
@@ -917,9 +1025,14 @@ nav .grid{
     background-size: auto contain;
     background-blend-mode: color-burn;
     padding-top: 94px;
-    padding-left: 16.5625%;
-    padding-right: 15.625%;
     padding-bottom: 54px;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
+}
+#gallery *{
+    margin: 0 auto;
+    max-width: 1200px;
 }
 #gallery h2{
     color: #ffffff;
@@ -927,7 +1040,6 @@ nav .grid{
     font-size: 45px;
     font-weight: 700;
     text-align: center;
-    
     margin-bottom: 38px;
 }
 #gallery p{
@@ -952,26 +1064,33 @@ nav .grid{
     display: grid;
     grid-row-gap: 35px;
     grid-column-gap: 38px;
-    width: 100%;
 }
 @media only screen and (min-width: 0px) and (max-width: 767px){
     #gallery{
         height: auto;
         background-size: cover;
-        padding-left: 0px;
-        padding-right: 0px;
+        padding: 10px;
+    }
+    #gallery h2, #gallery p{
+    margin-bottom: 10px;
     }
     #gallery .grid{
     grid-template: repeat(6, auto) / 1fr;
+    grid-row-gap: 10px;
     }
     .galleryUnit{
-    margin: 0 auto;    
+    margin: 0 auto;
+    height: auto;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
     #gallery{
         height: auto;
         background-size: cover;
+        padding: 25px;
+    }
+    #gallery h2, #gallery p{
+    margin-bottom: 25px;
     }
     #gallery .grid{
     grid-template: repeat(3, auto) / 1fr 1fr;
@@ -990,8 +1109,10 @@ nav .grid{
     background-color: #ffffff;
     padding-top: 150px;
     padding-bottom: 135px;
-    padding-left: 9.6875%;
-    padding-right: 11.5625%;
+    max-width: 1200px;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
 }
 #team h2{
     color: #494949;
@@ -1054,7 +1175,7 @@ nav .grid{
     #team{
         height: auto;
         background-size: cover;
-        padding: 20px 0px;
+        padding: 10px 10px 0px 10px;
     }
     #team h2, #team p{
     margin-bottom: 10px;
@@ -1066,17 +1187,37 @@ nav .grid{
     .teamUnit{
     margin: 0 auto;
     }
+    #team .teamUnit h3{
+    margin-bottom: 10px;
+    }
     #team .teamUnit p{
     margin-bottom: 10px;
     }
+    #team .teamUnit p:last-child{
+    margin-bottom: 0px;
+    }
+    .teamUnit .teamIcon{
+    margin-bottom: 10px;
+    }
+
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
     #team{
         height: auto;
         background-size: cover;
+        padding: 25px;
+    }
+    #team h2, #team p{
+    margin-bottom: 25px;
     }
     #team .grid{
     grid-template: repeat(2, auto) / 1fr 1fr;
+    }
+    #team .teamUnit p{
+    margin-bottom: 15px;
+    }
+    #team .teamUnit p:last-child{
+    margin-bottom: 0px;
     }
 }
 @media only screen and (min-width: 1025px){
@@ -1091,7 +1232,8 @@ nav .grid{
 #offer{
     box-sizing: border-box;
     min-height: 177px;
-    padding: 80px 15% 65px 15%;
+    padding: 80px 25px 65px 25px;
+    max-width: 1200px;
     background-color: #e2e2e2;
 }
 #offer .text{
@@ -1140,7 +1282,18 @@ nav .grid{
     #offer .btnOffer{
     float: none;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 25px;
+    }
+    #offer{
+    padding: 25px;
+    }
+}
+@media only screen and (min-width: 0px) and (max-width: 767px){
+    #offer{
+    padding: 10px;
+    }
+    #offer .btnOffer{
+    margin-top: 10px;
     }
 }
 /*FOOTER*/
@@ -1151,9 +1304,11 @@ nav .grid{
     box-sizing: border-box;
     background-color: #171717;
     padding-top: 110px;
-    padding-left: 13%;
-    padding-right: 11%;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-bottom: 110px;
+    max-width: 1200px;
+    box-sizing: border-box;
 }
 #footer h3, #footer-1 p{
     color: #ffffff;
@@ -1298,13 +1453,11 @@ footer form input[type=submit]{
 }
 @media only screen and (min-width: 0px) and (max-width: 767px){
     #footer{
-        padding-left: 0px;
-        padding-right: 0px;
+        padding: 10px;
     }
     #footer h3{
     margin-bottom: 10px;
     }
-
     #footer .grid{
     grid-row-gap: 10px;    
     grid-template-columns: 1fr;
@@ -1315,27 +1468,35 @@ footer form input[type=submit]{
         "right-menu"
         "address"
     }
-    #footer .grid *{
-    margin-left: auto;
-    margin-right: auto;
-    }
     #footer h3, #footer-1 p, #footer .social{
         text-align: center;
+        margin-bottom: 10px;
     }
-    #footer .grid input{
-        margin-left: 0px;
-        margin-right: 0px;
-        width: 100%;
+    #footer ul{
+    margin-bottom: 0px;
     }
     #footer input[type="submit"]{
         width: 125px;
         margin: 0px calc(50% - 62px);
     }
+    #footer-1, #footer-2, #footer-3{
+    margin: 0 auto;
+    }
+    #footer form input[type=text], footer form input[type=tel], footer textarea{
+    max-width: 100%;
+    width: 100%;
+    }
+    #footer .contact li{
+    margin-bottom: 10px;
+    }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px){
     #footer{
-        padding-left: 20px;
-        padding-right: 20px;
+        padding: 25px;
+    }
+    footer form input[type=text], footer form input[type=tel], footer textarea{
+    max-width: 100%;
+    width: 100%;
     }
     #footer h3{
         margin-bottom: 20px;
@@ -1347,6 +1508,9 @@ footer form input[type=submit]{
     grid-template-areas: 
         ". address . enquiryForm ."
         ". left-menu . right-menu ."
+    }
+    footer form input[type=submit]{
+    margin: 0 calc(50% - 62px);
     }
 }
 @media only screen and (min-width: 1025px){
