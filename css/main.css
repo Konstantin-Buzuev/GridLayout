@@ -638,6 +638,9 @@ nav .grid{
     .ChooseUnit:nth-child(-n+2){
         margin-top: 91px;
     }
+    .ChooseUnit:nth-child(even){
+    margin-left: auto;
+    }
 }
 /*ACHIEVEMENTS*/
 .achievements-back{
