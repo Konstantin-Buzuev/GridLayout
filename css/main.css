@@ -1147,6 +1147,7 @@ nav .grid{
     margin-bottom: 84px;
 }
 .teamUnit .teamIcon{
+    position : relative;
     max-width: 279px;
     max-height: 279px;
     background-color: #f4f3f1;
@@ -1154,7 +1155,37 @@ nav .grid{
     margin: 0 auto 35px auto;
 }
 .teamUnit .teamIcon img{
+    position : relative;    
     width: 100%;
+}
+.teamUnit .teamIcon .btnRegister{
+    position : absolute;
+    top: 45%;
+    width: 100%;
+    height: 43px;
+    box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.2);
+    background-color: #3cbbbb;
+    border-radius: 21px;
+    text-align: center;
+    margin: 0 auto;
+    opacity: 0;
+}
+.teamUnit .teamIcon .btnRegister:hover a{
+    color : green;
+}
+.teamUnit .teamIcon .btnRegister:hover{
+    cursor: pointer;    
+}
+
+.teamUnit .teamIcon .btnRegister a{
+    color: #ffffff;
+    font-family: Lato, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.32px;
+    line-height: 42px;
+    text-decoration: none;
 }
 #team .teamUnit h3{
     color: #6f6f6e;

@@ -129,3 +129,14 @@ animation-iteration-count: infinite;
 .galleryUnit:hover{
 transform: rotateY(180deg);
 }
+/*TEAM*/
+.teamUnit .teamIcon img, .teamUnit .teamIcon .btnRegister{
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+.teamUnit .teamIcon:hover img{
+    opacity: 0.2;
+}
+.teamUnit .teamIcon:hover .btnRegister{
+    opacity: 1.0;
+}
