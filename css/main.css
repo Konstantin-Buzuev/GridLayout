@@ -779,7 +779,7 @@ nav .grid{
     #achievements .grid{
     grid-row-gap: 0px;    
     grid-template-columns: minmax(10px, 250px) minmax(165px, 1fr) minmax(10px, 160px) minmax(141px, 1fr) minmax(10px, 180px) minmax(136px, 1fr) minmax(10px, 200px) minmax(160px, 1fr) minmax(10px, 250px);
-    grid-template-rows: 278px;
+    grid-template-rows: auto;
     grid-template-areas: 
         ". aunit-1 . aunit-2 . aunit-3 . aunit-4 ."
     }
@@ -1045,7 +1045,7 @@ nav .grid{
     text-align: center;
     margin-bottom: 38px;
 }
-#gallery p{
+#gallery p, .galleryUnit .description{
     color: #ffffff;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
@@ -1055,13 +1055,24 @@ nav .grid{
     margin-bottom: 54px;
 }
 .galleryUnit{
-    height: 210px;
+    max-height: 210px;
+    position: relative;
 }
 .galleryUnit img{
     width: 100%;
     max-width: 344px;
-    object-position: center;
-    object-fit: contain; 
+    height: auto;
+}
+.galleryUnit .description{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    box-sizing: border-box;
+    padding: 10px;
+    background: linear-gradient(45deg, #43b1d2, #37c3a8);
 }
 #gallery .grid{
     display: grid;
